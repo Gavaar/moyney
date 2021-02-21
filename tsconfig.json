@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": false,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": false,
+    "strict": true,
+    "target": "es2020",
+    "baseUrl": "./",
+    "paths": {
+      "@moyfirestore": ["src/firestore.ts"]
+    },
+    "lib": ["es2020"]
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "moyney-api",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "cd .. && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "tsc && cd .. && firebase deploy --only functions && cd apis",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.6.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0",
+    "firebase-tools": "^8.12.1",
+    "jest": "^26.5.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  },
+  "private": true
+}
